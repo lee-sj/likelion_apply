@@ -11,7 +11,7 @@ Gemfile 에있는 ruby 버전을 본인의 버전에 맞게 고쳐준다.
 
 `$ gem install bundler`
 
-터미널에 아래 명령어를 입력하면 자동으로 gem을 설치한다.  
+Gemfile 이 있는 'ruby_file' 폴더로 들어가 터미널에 아래 명령어를 입력하면 자동으로 gem을 설치한다.  
 
 `$ bundle`   
 
