@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'mechanize'
-
+require 'spreadsheet'
 print "Login to applylion!\n"
 ## 로그인 과정 
 mechanize = Mechanize.new
