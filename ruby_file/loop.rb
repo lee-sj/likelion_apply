@@ -37,7 +37,7 @@ user = link.click
 number = user.uri.to_s.split("/")[-1]
 user_page = mechanize.get("https://apply.likelion.org/apply/applicant/#{number}")
 user_info = user_page.search("#likelion_num  div:nth-child(2) > div.row.s_mt").text
-apply_info_1 = user_page.search("body > div.answer_view > div > div:nth-child(1) > div:nth-child(1) > p").text
+apply_info_1 = user_page.search("body > div.answer_view > div > div:nth-child(1) > div.row.m_mt > div > p").text
 apply_info_2 = user_page.search("body > div.answer_view > div > div:nth-child(2) > div.row.m_mt > div > p").text
 apply_info_3 = user_page.search("body > div.answer_view > div > div:nth-child(3) > div.row.m_mt > div > p").text
 apply_info_4 = user_page.search("body > div.answer_view > div > div:nth-child(4) > div.row.m_mt > div > p").text
@@ -45,5 +45,5 @@ apply_info_5 = user_page.search("body > div.answer_view > div > div:nth-child(5)
 row[i] = [ name[i], major[i], user_info.to_s.split(" ")[0], user_info.to_s.split(" ")[2] , apply_info_1, apply_info_2, apply_info_3, apply_info_4, apply_info_5]
 new_book.worksheet(0).insert_row(i, row[i])
 end
-new_book.write('apply.xls')
+new_book.write('apply.xls') # 원하는 생성 파일명으로 수정가능합니다. 
 print "Done!\n"
